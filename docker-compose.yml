@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+  dev:
+    build: .
+    volumes:
+      - type: bind
+        source: .
+        target: /app
+
+#windows起動時にBotも起動させたいならrestart: alwaysを付ける
+#    restart: always
